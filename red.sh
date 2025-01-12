@@ -10,7 +10,7 @@ echo "memeriksa vps anda"
 sleep 0.5
 CEKEXPIRED () {
 today=$(date -d +1day +%Y -%m -%d)
-Exp1=$(curl -sS https://raw.githubusercontent.com/Skukar/Aingmacan/main/ip | grep $MYIP | awk '{print $3}')
+Exp1=$(curl -sS https://raw.githubusercontent.com/BjhonStore/Premium/main/ip | grep $MYIP | awk '{print $3}')
 if [[ $today < $Exp1 ]]; then
 echo "status script aktif.."
 else
@@ -18,7 +18,7 @@ echo "SCRIPT ANDA EXPIRED";
 exit 0
 fi
 }
-IZIN=$(curl -sS https://raw.githubusercontent.com/Skukar/Aingmacan/main/ip | awk '{print $4}' | grep $MYIP)
+IZIN=$(curl -sS https://raw.githubusercontent.com/BjhonStore/Premium/main/ip | awk '{print $4}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 echo "IZIN DI TERIMA!!"
 else
@@ -51,7 +51,7 @@ mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
 echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
 sudo apt install vnstat
 sudo apt insta squid
-wget -q -O https://raw.githubusercontent.com/Skukar/Aingmacan/main/tools.sh && chmod +x tools.sh && ./tools.sh
+wget -q -O https://raw.githubusercontent.com/BjhonStore/Premium/main/tools.sh && chmod +x tools.sh && ./tools.sh
 rm tools.sh
 clear
 clear
@@ -76,10 +76,10 @@ echo -e "$green      Install SSH / WS / UDP              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-curl "https://raw.githubusercontent.com/Skukar/Aingmacan/main/menu/ssh-vpn.sh" | bash
+curl "https://raw.githubusercontent.com/BjhonStore/Premium/main/menu/ssh-vpn.sh" | bash
 sleep 2
-wget https://raw.githubusercontent.com/Skukar/Aingmacan/main/nginx-ssl.sh && chmod +x nginx-ssl.sh && ./nginx-ssl.sh
-wget -q -O demeling.sh https://raw.githubusercontent.com/Skukar/Aingmacan/main/demeling.sh && chmod +x demeling.sh && ./demeling.sh
+wget https://raw.githubusercontent.com/BjhonStore/Premium/main/nginx-ssl.sh && chmod +x nginx-ssl.sh && ./nginx-ssl.sh
+wget -q -O demeling.sh https://raw.githubusercontent.com/BjhonStore/Premium/main/demeling.sh && chmod +x demeling.sh && ./demeling.sh
 cd
 mkdir -p /root/udp
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
@@ -126,12 +126,12 @@ echo -e "$green      Install Websocket              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-curl "https://raw.githubusercontent.com/Skukar/Aingmacan/main/Insshws/insshws.sh" | bash
+curl "https://raw.githubusercontent.com/BjhonStore/Premium/main/Insshws/insshws.sh" | bash
 cd /usr/bin
-wget -O xp "https://raw.githubusercontent.com/Skukar/Aingmacan/main/menu/xp.sh"
+wget -O xp "https://raw.githubusercontent.com/BjhonStore/Premium/main/menu/xp.sh"
 chmod +x xp
 sleep 1
-wget -q -O /usr/bin/notramcpu "https://raw.githubusercontent.com/Skukar/Aingmacan/main/Finaleuy/notramcpu" && chmod +x /usr/bin/notramcpu
+wget -q -O /usr/bin/notramcpu "https://raw.githubusercontent.com/BjhonStore/Premium/main/Finaleuy/notramcpu" && chmod +x /usr/bin/notramcpu
 cd
 rm -f /root/ins-xray.sh
 rm -f /root/insshws.sh
@@ -141,15 +141,15 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$green      Install ALL XRAY               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
-curl "https://raw.githubusercontent.com/Skukar/Aingmacan/main/menu/insray.sh" | bash
+curl "https://raw.githubusercontent.com/BjhonStore/Premium/main/menu/insray.sh" | bash
 sleep 1
-curl "https://raw.githubusercontent.com/Skukar/Aingmacan/main/arca.sh" | bash
+curl "https://raw.githubusercontent.com/BjhonStore/Premium/main/arca.sh" | bash
 sleep 1
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install slowdns               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
-wget -q -O slowdns.sh https://raw.githubusercontent.com/Skukar/Aingmacan/main/SLDNS/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
+wget -q -O slowdns.sh https://raw.githubusercontent.com/BjhonStore/Premium/main/SLDNS/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 mkdir /root/akun
 mkdir /root/akun/vmess
 mkdir /root/akun/vless
@@ -159,15 +159,15 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$green      Install IPSEC L2TP & SSTP               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 1
-curl "https://raw.githubusercontent.com/Skukar/Aingmacan/main/ipsec/ipsec.sh" | bash
+curl "https://raw.githubusercontent.com/BjhonStore/Premium/main/ipsec/ipsec.sh" | bash
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install OPENVPN             $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-wget "https://raw.githubusercontent.com/Skukar/Aingmacan/main/Insshws/vpn.sh" && bash vpn.sh && rm vpn.sh
+wget "https://raw.githubusercontent.com/BjhonStore/Premium/main/Insshws/vpn.sh" && bash vpn.sh && rm vpn.sh
 clear
 echo "Installing Bot Panel" | lolcat
 echo "Siapkan Token bot dan ID telegram mu"
-rm -rf bot.sh && wget https://raw.githubusercontent.com/Skukar/Aingmacan/main/botssh/bot.sh && chmod 777 bot.sh && ./bot.sh && systemctl restart cybervpn
+rm -rf bot.sh && wget https://raw.githubusercontent.com/BjhonStore/Premium/main/botssh/bot.sh && chmod 777 bot.sh && ./bot.sh && systemctl restart cybervpn
 USERID=6127773468
 KEY="7409661884:AAHLXzywcgjvnBQJlkIZBhaKrEG9b8zODYg"
 TIMEOUT="10"
